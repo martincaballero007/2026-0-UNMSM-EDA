@@ -11,7 +11,7 @@ CArray::~CArray() { delete[] m_data; }
 
 value_type &CArray::operator[](size_t index) {
     cout << "XResizing from " << m_capacity << " to at least " << index + 5 << endl;
-    if (index > m_capacity){
+    if (index >= m_capacity){
     cout << "Resizing from " << m_capacity << " to at least " << index + 5 << endl;
     resize(index-m_last+5);
 }
@@ -19,8 +19,8 @@ value_type &CArray::operator[](size_t index) {
 
   assert(index < m_capacity);
 
-  if (index > m_last)
-    m_last = index;
+  if (index >= m_last)
+    m_last = index+1;
   return m_data[index];
 }
 
