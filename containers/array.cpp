@@ -29,6 +29,6 @@ void DemoArray() {
     arr1.sort(&Mayor);
     cout << arr1 << endl;
 
-    arr1.sort(&Menor);
+    arr1.Sumar1(&Menor);
     cout << arr1 << endl;
 }
